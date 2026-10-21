@@ -1,0 +1,30 @@
+{
+    "name": "verifiednet/verified-net",
+    "description": "Official PHP client for the Verified.net email, phone, carrier and IP verification API, with Laravel validation rules",
+    "type": "library",
+    "keywords": ["email verification", "email validation", "phone validation", "carrier lookup", "ip intelligence", "laravel", "validation"],
+    "homepage": "https://verified.net",
+    "license": "MIT",
+    "authors": [{"name": "Verified.net", "homepage": "https://verified.net"}],
+    "support": {
+        "docs": "https://verified.net/docs",
+        "source": "https://github.com/verifiednet/verified-php",
+        "issues": "https://github.com/verifiednet/verified-php/issues"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "illuminate/support": "For the Laravel service provider and validation rules (Laravel 10 or later)"
+    },
+    "autoload": {
+        "psr-4": {"VerifiedNet\\": "src/"}
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["VerifiedNet\\Laravel\\VerifiedServiceProvider"]
+        }
+    }
+}
